@@ -31,6 +31,21 @@ public class App {
             }
             else if (cmd.equals("목록")) {
                 System.out.println("총 개수 : " + list.size());
+                System.out.println("번호 / 명언 / 작가");
+                System.out.println("_____________________");
+
+                if (list.isEmpty()) System.out.println("등록된 명언이 없습니다.");
+
+                Quotation quotation;
+
+                int i = 0;
+
+                while ( i < 2 ) {
+                    quotation = list.get(i);
+                    System.out.println(quotation.id + " / " + quotation.content + " / " + quotation.author);
+
+                    i ++;
+                }
             }
         }
     };
